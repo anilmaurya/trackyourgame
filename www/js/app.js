@@ -48,21 +48,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
+    .state('tab.games', {
+      url: '/games',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+        'tab-games': {
+          templateUrl: 'templates/tab-games.html',
+          controller: 'GamesCtrl'
         }
       }
     })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
+    .state('tab.game-detail', {
+      url: '/game/:gameId',
+      templateUrl: 'templates/game-detail.html',
+      controller: 'GamesDetailCtrl'
+    })
+    
+    .state('login', {
+      url: "/login",
+      templateUrl: "templates/login.html",
+      controller: 'LoginCtrl'
+    })
+
+    .state('signup', {
+      url: "/signup",
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
+        'signup': {
+          templateUrl: "templates/signup.html",
+          controller: 'SignupCtrl'
         }
       }
     })
@@ -78,7 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 
 });
 

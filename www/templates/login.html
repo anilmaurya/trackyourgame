@@ -1,0 +1,22 @@
+<ion-view title="Login" hide-back-button="true">
+  <ion-content has-header="true" has-tabs="true" padding="true">
+    <form ng-submit="tryLogin(user)">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="Email" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Password" ng-model="user.password">
+        </label>
+        <div class="padding">
+            <button class="button button-block button-positive" type="submit">
+                Sign-In
+            </button>
+        </div>
+        <div style="text-align: center">
+          Or <a href="/#/signup">Create an account</a>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
