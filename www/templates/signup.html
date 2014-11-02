@@ -1,15 +1,15 @@
-<ion-view title="'Signup'">
+<ion-view title="Signup" hide-back-button="true">
   <ion-content has-header="true" has-tabs="true" padding="true">
-    <form ng-submit="trySignup()">
+    <form ng-submit="Signup(user)">
       <div class="list">
         <label class="item item-input">
-          <input type="text" placeholder="Name" ng-model="loginData.name">
+          <input type="text" placeholder="Username" ng-model="user.username">
         </label>
         <label class="item item-input">
-          <input type="text" placeholder="Email" ng-model="loginData.email">
+          <input type="text" placeholder="Mobile no" ng-model="user.number">
         </label>
         <label class="item item-input">
-          <input type="password" placeholder="Password" ng-model="loginData.password">
+          <input type="password" placeholder="Password" ng-model="user.password">
         </label>
         <div>
           <button class="button button-block button-positive" type="submit">Create account</button>

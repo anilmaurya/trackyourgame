@@ -71,12 +71,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     .state('signup', {
       url: "/signup",
-      views: {
-        'signup': {
-          templateUrl: "templates/signup.html",
-          controller: 'SignupCtrl'
-        }
-      }
+      templateUrl: "templates/signup.html",
+      controller: 'SignupCtrl'
     })
 
     .state('tab.account', {
